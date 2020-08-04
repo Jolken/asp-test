@@ -44,7 +44,7 @@ namespace Shop.Data.Models
             appDBContent.SaveChanges();
         }
 
-        public List<ShopCartItem> GetShortItems()
+        public List<ShopCartItem> GetShopItems()
         {
             return appDBContent.ShopCartItem.Where(i => i.shopCartId == ShopCartId).Include(s => s.car).ToList();
         }

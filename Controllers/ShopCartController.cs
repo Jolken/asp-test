@@ -22,7 +22,7 @@ namespace Shop.Controllers
 
         public ViewResult Index()
         {
-            var items = _shopCart.GetShortItems();
+            var items = _shopCart.GetShopItems();
             _shopCart.listShopItems = items;
 
             var obj = new ShopCartViewModel
